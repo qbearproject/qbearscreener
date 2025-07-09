@@ -16,7 +16,7 @@ st.set_page_config(
     page_icon="🧸"
 )
 
-st.write('<div style="text-align : center;"><font size="35"><b>SCREENER</b></font></div>', unsafe_allow_html=True)
+st.write('<div style="text-align : center;"><font size="35"><b>SCHOLAR</b></font></div>', unsafe_allow_html=True)
 st.write('<div style="text-align : center;"><font size="3"><i>by - theqbearproject</i></font></div>', unsafe_allow_html=True)
 
 st.markdown("""
