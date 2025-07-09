@@ -430,6 +430,6 @@ st.markdown("""
 st.markdown("""
 <br><br><br><br>
 
-<li><a href="https://qbearproject.github.io/qbear-project.github.io/"><b>Designed and Maintained by - QBear</b></a></li>
+© 2025 The QBear project. All rights reserved.
 
 """, unsafe_allow_html=True)
