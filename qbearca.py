@@ -7,6 +7,7 @@ from plotly.subplots import make_subplots
 import streamlit as st
 from sklearn.linear_model import LinearRegression
 from datetime import datetime, timedelta
+from PIL import Image
 
 
 st.set_page_config(
@@ -15,12 +16,27 @@ st.set_page_config(
     page_icon="🧸"
 )
 
+st.write('<div style="text-align : center;"><font size="35"><b>SCREENER</b></font></div>', unsafe_allow_html=True)
+st.write('<div style="text-align : center;"><font size="3"><i>by - theqbearproject</i></font></div>', unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+    /* Sidebar styling */
+    [data-testid="stSidebar"] {
+        background-color: #530000;
+        color: #ffffff;
+    }
+</style>
+""", unsafe_allow_html=True)
+logo = Image.open(r"C:\Users\asus\OneDrive\Desktop\Qbear\Qbear website\Q (1).jpg")
 company_list = ["TATAMOTORS", "RELIANCE", "HDFCBANK", "ICICIBANK", "INFY",
                 "BDL", "TCS", "HINDUNILVR", "MARUTI", "LT", "VBL", "SUNPHARMA",
                 "HCLTECH", "SBIN", "ITC", "ONGC", "TRENT"]
 
+#st.sidebar.write('<div style="text-align : center;"><font size="10"><b>QBear</b></font></div>', unsafe_allow_html=True)
+st.sidebar.image(logo, use_container_width=True )
 selected_company = st.sidebar.selectbox('Choose your company', company_list)
-st.sidebar.link_button('Home', "https://qbearproject.github.io/qbear-project.github.io/")
+st.sidebar.link_button('Back', "https://qbearproject.github.io/qbear-project.github.io/")
 st.sidebar.markdown("---")
 st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 st.sidebar.caption(
@@ -372,9 +388,14 @@ class analyst_targets:
                 
                 st.metric("Analysts Ratings ", f"{analyst_rating}")
             st.divider()
-                
-            st.write(f"<font size='20'> RECOMMENDATION - {recomendation.upper()} </font>", unsafe_allow_html=True)
 
+
+            rec_color = "#2ecc71" if recomendation.lower() == 'buy' else "#e74c3c" if recomendation.lower() == 'sell' else "#f39c12"
+            st.markdown(f"<h2 style='text-align: center; color: {rec_color};'>RECOMMENDATION: {recomendation.upper()}</h2>", 
+                        unsafe_allow_html=True)
+
+                
+            
         except Exception as e:
             st.info("This company may be left for analysis")
 
