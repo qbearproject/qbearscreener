@@ -29,9 +29,10 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 logo = Image.open(r"Q (1).jpg")
-company_list = ["TATAMOTORS", "RELIANCE", "HDFCBANK", "ICICIBANK", "INFY",
+company_list = ["TATAMOTORS", "RELIANCE", "ICICIBANK", "INFY",
                 "BDL", "TCS", "HINDUNILVR", "MARUTI", "LT", "VBL", "SUNPHARMA",
-                "HCLTECH", "SBIN", "ITC", "ONGC", "TRENT"]
+                "HCLTECH", "ITC", "ONGC", "TRENT", "ADANIENT", "TITAN"
+               "ULTRACEMCO", "ASIANPAINT", "TATACONSUM", "CIPLA", ]
 
 #st.sidebar.write('<div style="text-align : center;"><font size="10"><b>QBear</b></font></div>', unsafe_allow_html=True)
 st.sidebar.image(logo, use_container_width=True )
