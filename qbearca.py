@@ -161,7 +161,7 @@ class CompanyDetails:
                 st.metric("52 Week High / Low", f"₹ {weekshigh52} / {weekslow52}")
                 st.metric("Debt to Equity", f"{de}")
                 st.metric("Beta", f"{beta:.2f}")
-                st.metric("Revenue Growth", f"{rev_growth*100} %")
+                st.metric("Revenue Growth", f"{rev_growth*100:.2f} %")
         except Exception as e:
             st.info("Some data not available for this company.")
 
