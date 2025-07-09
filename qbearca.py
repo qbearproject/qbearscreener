@@ -28,7 +28,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-logo = Image.open(r"C:\Users\asus\OneDrive\Desktop\Qbear\Qbear website\Q (1).jpg")
+logo = Image.open(r"Q (1).jpg")
 company_list = ["TATAMOTORS", "RELIANCE", "HDFCBANK", "ICICIBANK", "INFY",
                 "BDL", "TCS", "HINDUNILVR", "MARUTI", "LT", "VBL", "SUNPHARMA",
                 "HCLTECH", "SBIN", "ITC", "ONGC", "TRENT"]
